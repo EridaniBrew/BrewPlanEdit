@@ -1,0 +1,12 @@
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.exe
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.exe.config
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.AboutBox.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.MainForm.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.Resources.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.vbproj.GenerateResource.Cache
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.exe
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.xml
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.pdb
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.pdb
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.xml
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.PrefDialog.resources

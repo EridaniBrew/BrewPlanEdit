@@ -1,0 +1,7 @@
+﻿#startsetnum 2
+#AfInterval 60
+#Defocus -150
+#WaitFor 30
+#WaitInLimits 60
+#Sets 2
+#Repeat 2

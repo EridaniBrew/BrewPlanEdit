@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Context Menu</title>
+    <link rel=StyleSheet href="design.css" type="text/css" media=screen>
+</head>
+<body>
+    <h2>Context Menu</h2>
+
+    Right clicking the Plan Directive List brings up a menu of operations.<p/>
+
+    <img src="images/ContextMenu.jpg" />
+    <p/>
+    <h3>Add</h3>
+    
+    This leads to a series of directives which may be added. They are added with default values which can then be edited as desired.<p/>
+
+    I have grouped the directives into (possibly arbitrary) groups to make it quicker to access a given directive.
+
+    <h3>Add Alphabetical</h3>
+
+    <img src="images/ContextMenuAlpha.jpg" />
+    This rearranges the directives into alphabetical order. It may be easier to find directives alphabetically, 
+    especially if you do not mentally group the directives the same way I do...
+
+    <h3>Comment/Uncomment Line</h3>
+
+    An existing directive may be converted to a comment:<p/>
+    <span id="directive">#chill -10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;#chill -10</span><p/>
+
+    The comment may then be converted back to the directive with the Uncomment menu item.<p/>
+    <span id="directive">;#chill -10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; #chill -10</span><p />
+
+    <h3>Move Up/Down</h3>
+
+    These allow directives to be moved up or down in the plan.
+    <h3>Delete</h3>
+    This removes the directive from the plan. No, there is no Undo mechanism:)
+
+</body>
+</html>

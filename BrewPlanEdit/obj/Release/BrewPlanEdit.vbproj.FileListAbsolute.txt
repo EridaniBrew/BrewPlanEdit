@@ -1,0 +1,17 @@
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Release\BrewPlanEdit.exe.config
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Release\BrewPlanEdit.exe
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Release\BrewPlanEdit.pdb
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Release\BrewPlanEdit.xml
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.AboutBox.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.MainForm.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.Resources.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.PrefDialog.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.vbproj.GenerateResource.Cache
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.exe
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.xml
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.pdb
+C:\Users\robert\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Release\BrewPlanEdit.exe.config
+C:\Users\robert\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.exe
+C:\Users\robert\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.xml
+C:\Users\robert\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.pdb
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Release\BrewPlanEdit.vbprojResolveAssemblyReference.cache

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Count/Interval/Binning/Filter Combination</title>
+    <link rel=StyleSheet href="design.css" type="text/css" media=screen>
+</head>
+<body>
+    <h2>Combined Filter Directive</h2>
+    <img src="images/Combo.jpg" /><p/>
+    The #Count / #Interval / #Binning / #Filter directives are treated as a special case. They are combined into a single "directive"
+    so they are always in sync with the same number of entries. The directives are written to the plan as individual lines.<p/>
+
+    When reading the plan the individual directives may be in any order; however, the written plan will always have them in the same order.<p/>
+
+    By default, the combined directive has all 4 directives (count, interval, binning, filter). Toggling the checkbox to the left
+    of the individual lines will remove that particular line. <p/>
+    
+    For example, in the beginning of the plan you establish the 4 directives. Later you change the filters and interval, but leave the count and binning the same.<p/>
+    <span id="directive">
+        #count 10,12<br />
+        #interval 120,120<br />
+        #binning 2,2<br />
+        #filter Red, Blue<p />
+    </span>
+    ... various targets, etc<p/>
+        <span id="directive">
+            #interval 240,240<br />
+            #filter HAlpha, Oiii<p />
+        </span>
+    
+    As a result of this combination there are no comments allowed on the individual lines (notice that the Note field does not appear).
+    <p/>
+    The combined directive can be converted into comments, then later uncommented.
+    <p/>
+    The filter names are loaded from the Preferences dialog. You can select one of three filter sets available. 
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿#subframe 0.5
+#waituntil 0,4:00 AM      ; local datetime is 09:00 PM
+#QuitAt 11/29/2015 3:00:00 PM      ; local datetime is 11/29/2015 8:00:00 AM
+;#garbled 4   ;  my dithering
+#PosAng 120
+#Count 10, 15
+#Interval 60, 600
+#Binning 1, 2
+#Filter HAlpha, Red
+MyTarget
+#ShutdownAt 2:00 PM      ; local datetime is 07:00 AM

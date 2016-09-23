@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Features</title>
+    <link rel=StyleSheet href="design.css" type="text/css" media=screen>
+</head>
+<body>
+    <h2>Features</h2>
+    <img src="images/Overview.jpg" /><p />
+    <h3>Field formatting</h3>
+    Plan directives are added with default values for the various fields. These values are generally changed to whatever the user desires.
+    For example, the Target directive shown above allows entry of the target name, or the optional RA/Dec coordinates.<p/>
+
+    There are some validation checks on the fields, but these edits are by no means exhaustive.<p/>
+
+    The fields to be edited have tooltips to remind the user what the field does; sometimes there is text next to the field as a reminder.<p/>
+
+    <h3>ACP Help Information</h3>
+    The information from the ACP User's Manual for each of the directives is presented for each directive. See the topic 
+    <a href="ACPHelp.htm">ACP Help</a>. I just copied the ACP Help information; when Bob changes the documentation, those changes will not be automatically picked up by the editor.
+
+    <h3>UTC/Local Time</h3>
+    Several of the directives require date/time in UTC time. When editing the field the time is presented and input in the user's Local time units. 
+    For example, I add a #shutdown directive to shut down at 8:30 in the morning my time (the time zone of my computer), and that time is 
+    converted into UTC time by the editor. The local time is
+    shown in the directive's comment for reference.<p/>
+
+    <span id="directive">#shutdownat 12/11/15 1:30 PM &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; local time 12/16/15 8:30 AM</span>
+
+    <h3>Filter set Coordination</h3>
+    See the topic <a href="ComboCmd.htm">Combined Filter Directive</a> for information on how this works. Basically, instead of entering individual 
+    #count / #interval / #binning / #filter directives, the editor combines these into a single "block" of directives. This keeps them in sync with the same number of entries.
+
+    <h3>Filter Sets</h3>
+    The Preferences dialog allows entry of 3 different sets of up to 10 filters. This allows the Filter choices to be restricted to appropriate choices. No more mis-spelling
+    of filter names.
+
+    <h3>Comments</h3>
+    A directive can be converted into a comment so it is inactive. Later, the commented directive can be uncommented when the user is ready to
+    activate the directive.<p/>
+
+    You can do some tricks with comments. For example, you cannot Add a #completionstate directive (you are not supposed to do that!). 
+    However, you can add a comment, then fill it in with the #completionstate directive, then Uncomment the line. Voila! The desired
+    #completionstate directive. 
+
+    <h3>Directive Ordering</h3>
+    Directives can be adjusted up or down in the plan as desired.
+
+    <h3>Multiple Plans</h3>
+    The user can open multiple editing tabs, each with a different plan. This makes it easy to compare plans.
+
+    <h3>Warnings</h3>
+    Directive errors can pop up warning messages. In addition, directives with potential issues (for example, a directive with a date before today) are marked with red text 
+    in the plan list area.
+
+</body>
+</html>

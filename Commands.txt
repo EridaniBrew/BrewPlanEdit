@@ -1,0 +1,87 @@
+#calibrate
+#autoguide
+#stack
+#stackalign
+#Pointing
+#nopointing
+#nopreview
+#nosolve
+
+#waitfor 30   'sec
+#waituntil 1, 08:32:00
+           2, 09:21:00
+           1, 21-Apr-2011 12:33:00
+           0, 09:20:00   ;any night any set
+           1, 7/3/12 06:34 PM
+
+no date, waits up to 12 hours
+           0, -10.5   ; sun angle
+#waitzendist 40,30 ; within 40 deg of zenith, foWaitAirMassr up to 30 minutes
+#waitinlimits 60    ; within limits, max 60 minutes
+#waitairmass 2.5, 30  ; at or below 2.5 airmassses for up to 30 min
+#tag name=val   ; attaches to target
+
+; current and all future targets
+#count
+#interval
+#filter
+#binning
+#subframe 0.5   ; fraction of chip 0.1-1.0
+#posangle 240.5   ; rotator
+#dither 3.0    ; 0 disables 
+#dither     ; automatic (5)
+#dir folderName   ; image store 
+#dir     ; restore default
+#trackon    ; orbital tracking
+#trackoff
+#readoutmode maximName
+#defocus -150  ; jog focuser
+
+; plan as a whole
+#sets 3     ; Repeats entire plan n
+#afinterval 50    ; minutes
+#alwayssolve     ; force solving all images even if one failed
+#duskflats    ; defaultflat.txt
+#duskflats folder/myflatname.txt
+#minsettime 00:05  ; waits 5 minutes before starting next set. Min amount of time set is allowed
+#quitat  7/4/06 08:22   ; like waituntil
+#shutdownat 7/4/15 08:22  ; like waituntil
+#shutdown
+#startsetnum 6  ; do not use?
+#completionstate 2,4,1,3,1  ; autoinserted
+
+; like targets
+#dark  optFullPathFileName   ; uses interval
+#bias   optFullPathFileName
+#manual MyImage
+#manual  ; autofilename
+#chill -5.0,0.2   ; tolerance 0.2
+#domeopen
+#domeclose
+#noweather   ; should follow domeclose
+
+#chain c:..../LateNight.txt
+#chain LateNight.txt ; in same folder as current plan
+#dawnflats
+#dawnflats flatfilename.txt  ; orfull path
+#screenflats   ; like dawnflats
+#chainscript Cleanup.vbs   ; or path
+
+
+
+((LCase(pieces(0)) = "#autofocus") Or _
+                            (LCase(pieces(0)) = "#calibrate") Or _
+                            (LCase(pieces(0)) = "#autoguide") Or _
+                            (LCase(pieces(0)) = "#stack") Or _
+                            (LCase(pieces(0)) = "#stackalign") Or _
+                            (LCase(pieces(0)) = "#pointing") Or _
+                            (LCase(pieces(0)) = "#nopoiinting") Or _
+                            (LCase(pieces(0)) = "#nopreview") Or _
+                            (LCase(pieces(0)) = "#nosolve") Or _
+                            (LCase(pieces(0)) = "#trackon") Or _
+                            (LCase(pieces(0)) = "#trackoff") Or _
+                            (LCase(pieces(0)) = "#alwayssolve") Or _
+                            (LCase(pieces(0)) = "#shutdown") Or _
+                            (LCase(pieces(0)) = "#noweather") Or _
+                            (LCase(pieces(0)) = "#domeopen") Or _
+                            (LCase(pieces(0)) = "#domeclose")

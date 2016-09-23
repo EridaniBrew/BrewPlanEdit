@@ -1,0 +1,38 @@
+
+
+Start implementing other commands
+- waituntil types
+    DONE waituntil 0,ddd
+    DONE quitat ddd
+    DONE shutdownat ddd
+- directory?
+    DONE dir folderpath
+    DONE dark  singlefilepath
+    DONE bias  singlefilepath
+    DONE chain filename/path
+    DONE chainscript filename/path
+    DONE duskflats   filename/path
+    DONE dawnflats   filename/path
+    DONE screenflats  filename/path
+- one Integer
+    DONE waitfor x
+    DONE waitinlimits
+    DONE defocus -150
+    DONE sets n
+    DONE repeat n
+    DONE afinterval n
+    DONE startsetnum
+- one double
+    DONE dither 4
+    DONE subframe 0..1
+    DONE posang 0..360
+- two integer
+    DONE waitzendist  x,y
+- double int
+    DONE waitairmass  d,i
+- other
+    DONE tag name=value
+    DONE readoutmode string
+    DONE completionstate 1,2,3,4,5  MultiVal?
+    DONE manual optName
+    DONE minsettime 00:05

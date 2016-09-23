@@ -1,0 +1,22 @@
+﻿;
+; Testing combo items
+;#Count 5, 6, 15
+;#Interval 900, 900, 900
+;#Binning 1, 1, 1
+;#Filter Red, Green, Blue
+Sh 2-155
+#Count 5, 6, 15
+#Interval 600, 600, 600
+#Binning 1, 1, 1
+#Filter Red, Green, Blue
+Sh 2-155
+anotherTarget
+#Count 5, 7
+#Interval 60, 90
+#Binning 2, 2
+#Filter Clear, Green
+twoItems
+#chill -5
+targethere
+#Binning 3, 3
+#Filter Sii, Oiii

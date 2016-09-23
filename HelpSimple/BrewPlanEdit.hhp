@@ -1,0 +1,25 @@
+[OPTIONS]
+Auto Index=Yes
+Auto TOC=3
+Compatibility=1.1 or later
+Compiled file=BrewPlanEdit.chm
+Contents file=Table of Contents.hhc
+Default topic=..\BrewPlanEdit\Introduction.htm
+Display compile progress=Yes
+Full text search stop list file=search.stp
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x409 English (United States)
+Title=BrewPlanEdit Help
+
+
+[FILES]
+design.css
+..\BrewPlanEdit\Introduction.htm
+..\BrewPlanEdit\Features.htm
+..\BrewPlanEdit\ContextMenu.htm
+..\BrewPlanEdit\ACPHelp.htm
+..\BrewPlanEdit\ComboCmd.htm
+
+[INFOTYPES]
+

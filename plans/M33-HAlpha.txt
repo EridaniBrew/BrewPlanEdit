@@ -1,0 +1,12 @@
+#startsetnum 2 ; Persistent set numbering added by ACP
+#filter Blue
+#interval 900
+#count 7
+#binning 1
+#autofocus
+M 33
+#filter HAlpha
+#autofocus
+#count 1
+M 33
+#shutdown

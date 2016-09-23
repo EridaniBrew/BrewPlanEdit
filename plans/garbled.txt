@@ -1,0 +1,6 @@
+﻿#confused 
+;    Plan for Caldwell 9 Cave Nebula
+#chill -10    ;  
+#garbled  ; test it
+#autofocus    ;    with a comment
+#junk here

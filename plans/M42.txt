@@ -1,0 +1,30 @@
+#startsetnum 1 ; Persistent set numbering added by ACP
+#completionstate 0,0,0,3,3 ; Plan completion status added by ACP
+#dither 2
+#Sets 2
+#filter HAlpha,UHC,Oiii,Blue,Green
+#interval 20,20,20,20,20
+#autofocus
+#count 6,6,6,6,6
+#chill -10
+#binning 1,1,1,1,1
+M 42
+;
+#interval 10,10,10,10,10
+#dither 4
+#count 3,3,3,3,3
+M 42
+#interval 60,60,60,60,60
+M 42
+;
+#interval 60,60,60,60,60
+#autofocus
+#filter HAlpha,UHC,Oiii,Blue,Green
+#subframe 0.5
+#count 2,2,2,2,2
+NGC 1977
+;
+#interval 20,20,20,20,20
+#autofocus
+NGC 1977
+;

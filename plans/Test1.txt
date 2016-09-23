@@ -1,0 +1,4 @@
+;
+; Plan for Caldwell 9 Cave Nebula
+#chill -10
+#autofocus    ; with a comment

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Introduction</title>
+    <link rel=StyleSheet href="design.css" type="text/css" media=screen>
+</head>
+<body>
+    <h2>Introduction</h2>
+    <img src="images/target2.jpg" style="float:left; padding-right: 10px; padding-left: 10px"  />
+    I have historically used Notepad to edit my plans for ACP. Occasionally I use ACP's Planner to initially generate a plan, but I always end up
+    modifying that plan in Notepad. Usually I just copy an existing plan, then modify that plan for my new target.<p/>
+
+    The problem is that I often want to add a plan directive, but I don't actually remember the format of the directive or what the various parameters might be. 
+    Is it #WaitUntil or #ShutdownAt that has the Sets parameter?<p/>
+
+    I also constantly screw up the format. For example, I change from 4 filters to 2 but forget to change the corresponding Count or Interval or Binning parameters. 
+    Heaven forbid I should be able to convert Local time to UTC time for things like #waituntil. Of course, if I have a #shutdownat directive I always forget to 
+    change the date to the next morning when I restart the plan the next night.<p/>
+
+    I constantly restart my plans. Sometimes ACP immediately finds a problem (like mismatching #filter/ #count/ #interval/ #binning entries). 
+    Often I don't realize I have an error until hours into the run...
+    <p/>
+    <img src="images/Overview.jpg" /><p/>
+    So, I wrote this editor to try and keep my plans a bit under control. See the <a href="Features.htm">Features</a> page for things it does.<p/>
+    <p/>
+    If you find issues with the editor, please drop me an email. Include a screenshot of the problem and a copy of the plan causing the issue to help me understand and debug the issue.<p/>
+
+    Robert Brewington<br/>
+    eridanibrew@gmail.com
+
+</body>
+</html>

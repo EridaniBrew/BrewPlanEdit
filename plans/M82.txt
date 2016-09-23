@@ -1,0 +1,35 @@
+#startsetnum 1 ; Persistent set numbering added by ACP
+#completionstate 1,1,0,2,1 ; Plan completion status added by ACP
+;
+; --------------------------------------------
+; M 82 target
+; --------------------------------------------
+;
+; For:           brew
+; Location:      BrewSky Observatory
+; Coords:        Lat = 43° 09' 01" Lon = 77° 36' 21"
+; Targets:       1
+;
+; NOTE:          Timing features are disabled
+;
+; Autofocus at start of run.
+; Autofocus every 45 minutes.
+;
+; ---------------------------------------------
+;
+#autofocus
+#dither    ; Automatic dithering
+#chill -20.0
+;
+; === Target NGC 7822 ===
+;
+#sets 2
+#interval 900,900,900,900,900
+#binning 1,1,1,1,1
+#count 3,3,3,3,3
+#filter HAlpha,UHC,Blue,Green,Clear
+myM82	9 56 22	69 7 29
+;
+#dither 0    ; Disable dithering
+;
+;#shutdown     ; Shut down the observatory

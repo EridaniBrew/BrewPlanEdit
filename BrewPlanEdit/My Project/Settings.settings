@@ -1,0 +1,49 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="FilterSet1" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Clear&lt;/string&gt;
+  &lt;string&gt;Red&lt;/string&gt;
+  &lt;string&gt;Green&lt;/string&gt;
+  &lt;string&gt;Blue&lt;/string&gt;
+  &lt;string&gt;HAlpha&lt;/string&gt;
+  &lt;string&gt;Oiii&lt;/string&gt;
+  &lt;string&gt;Sii&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterSet2" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Clear&lt;/string&gt;
+  &lt;string&gt;Red&lt;/string&gt;
+  &lt;string&gt;Green&lt;/string&gt;
+  &lt;string&gt;Blue&lt;/string&gt;
+  &lt;string&gt;HAlpha&lt;/string&gt;
+  &lt;string&gt;Oiii&lt;/string&gt;
+  &lt;string&gt;Sii&lt;/string&gt;
+  &lt;string&gt;U&lt;/string&gt;
+  &lt;string&gt;V&lt;/string&gt;
+  &lt;string&gt;R&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterSet3" Type="System.Collections.Specialized.StringCollection" Scope="User">
+      <Value Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;ArrayOfString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;string&gt;Lum&lt;/string&gt;
+  &lt;string&gt;Red&lt;/string&gt;
+  &lt;string&gt;Green&lt;/string&gt;
+  &lt;string&gt;Blue&lt;/string&gt;
+  &lt;string&gt;HAlpha&lt;/string&gt;
+  &lt;string&gt;Oiii&lt;/string&gt;
+  &lt;string&gt;Sii&lt;/string&gt;
+  &lt;string&gt;Neutral&lt;/string&gt;
+&lt;/ArrayOfString&gt;</Value>
+    </Setting>
+    <Setting Name="FilterSetInUse" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

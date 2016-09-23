@@ -1,0 +1,12 @@
+;
+; Plan for Caldwell 9 Cave Nebula
+#ShutdownAt 7/21/2014 11:20      ; 4:20
+#dither 3
+;#chill -10
+#afinterval 60
+#Filter Red,Green,Blue
+#Binning 1,1,1
+#Count 5,6,15
+;
+#Interval 900,900,900
+Sh 2-155
