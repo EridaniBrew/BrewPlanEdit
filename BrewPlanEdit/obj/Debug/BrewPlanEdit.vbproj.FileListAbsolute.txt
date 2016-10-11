@@ -10,3 +10,4 @@ C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\Brew
 C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.pdb
 C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\bin\Debug\BrewPlanEdit.xml
 C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.PrefDialog.resources
+C:\Users\erida\Dropbox\BrewSky\Programs\BrewPlanEdit\BrewPlanEdit\obj\Debug\BrewPlanEdit.vbprojResolveAssemblyReference.cache

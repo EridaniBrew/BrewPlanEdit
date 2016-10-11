@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class MainForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
@@ -46,6 +46,9 @@ Partial Class MainForm
         Me.TargetSpecToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TargetToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CountToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FilterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.IntervalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BinningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.DitherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SubFrameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -275,9 +278,6 @@ Partial Class MainForm
         Me.HelpProvider1 = New System.Windows.Forms.HelpProvider()
         Me.OpenDirDialog = New System.Windows.Forms.FolderBrowserDialog()
         Me.OpenPathDialog = New System.Windows.Forms.OpenFileDialog()
-        Me.FilterToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.IntervalToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.BinningToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.menuCommand.SuspendLayout()
         Me.pnlTarget.SuspendLayout()
@@ -326,47 +326,47 @@ Partial Class MainForm
         'OpenToolStripMenuItem
         '
         Me.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem"
-        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.OpenToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.OpenToolStripMenuItem.Text = "Open"
         '
         'SaveToolStripMenuItem
         '
         Me.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem"
-        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.SaveToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.SaveToolStripMenuItem.Text = "Save"
         '
         'SaveAsToolStripMenuItem
         '
         Me.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem"
-        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.SaveAsToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.SaveAsToolStripMenuItem.Text = "Save As"
         '
         'CloseToolStripMenuItem
         '
         Me.CloseToolStripMenuItem.Name = "CloseToolStripMenuItem"
-        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
-        Me.CloseToolStripMenuItem.Text = "Close"
+        Me.CloseToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
+        Me.CloseToolStripMenuItem.Text = "Close Tab"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(115, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(122, 6)
         '
         'AddTabToolStripMenuItem
         '
         Me.AddTabToolStripMenuItem.Name = "AddTabToolStripMenuItem"
-        Me.AddTabToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.AddTabToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.AddTabToolStripMenuItem.Text = "Add Tab"
         '
         'ToolStripSeparator4
         '
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
-        Me.ToolStripSeparator4.Size = New System.Drawing.Size(115, 6)
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(122, 6)
         '
         'ExitToolStripMenuItem
         '
         Me.ExitToolStripMenuItem.Name = "ExitToolStripMenuItem"
-        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.ExitToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
         Me.ExitToolStripMenuItem.Text = "Exit"
         '
         'OptionsToolStripMenuItem
@@ -406,7 +406,6 @@ Partial Class MainForm
         Me.lstCommands.ContextMenuStrip = Me.menuCommand
         Me.lstCommands.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lstCommands.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable
-        Me.lstCommands.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lstCommands.FormattingEnabled = True
         Me.lstCommands.Location = New System.Drawing.Point(3, 3)
         Me.lstCommands.Name = "lstCommands"
@@ -450,6 +449,24 @@ Partial Class MainForm
         Me.CountToolStripMenuItem.Name = "CountToolStripMenuItem"
         Me.CountToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
         Me.CountToolStripMenuItem.Text = "#Count"
+        '
+        'FilterToolStripMenuItem
+        '
+        Me.FilterToolStripMenuItem.Name = "FilterToolStripMenuItem"
+        Me.FilterToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.FilterToolStripMenuItem.Text = "#Filter"
+        '
+        'IntervalToolStripMenuItem
+        '
+        Me.IntervalToolStripMenuItem.Name = "IntervalToolStripMenuItem"
+        Me.IntervalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.IntervalToolStripMenuItem.Text = "#Interval"
+        '
+        'BinningToolStripMenuItem
+        '
+        Me.BinningToolStripMenuItem.Name = "BinningToolStripMenuItem"
+        Me.BinningToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.BinningToolStripMenuItem.Text = "#Binning"
         '
         'ToolStripSeparator3
         '
@@ -794,7 +811,7 @@ Partial Class MainForm
         '
         Me.AToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AfIntervalToolStripMenuItem1, Me.AlwaysSolveToolStripMenuItem1, Me.AutofocusToolStripMenuItem1, Me.AutoGuideToolStripMenuItem1})
         Me.AToolStripMenuItem.Name = "AToolStripMenuItem"
-        Me.AToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.AToolStripMenuItem.Text = "a"
         '
         'AfIntervalToolStripMenuItem1
@@ -825,7 +842,7 @@ Partial Class MainForm
         '
         Me.BToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BiasToolStripMenuItem1, Me.BinningToolStripMenuItem1})
         Me.BToolStripMenuItem.Name = "BToolStripMenuItem"
-        Me.BToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.BToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.BToolStripMenuItem.Text = "b"
         '
         'BiasToolStripMenuItem1
@@ -844,7 +861,7 @@ Partial Class MainForm
         '
         Me.CToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalibrateToolStripMenuItem1, Me.ChainToolStripMenuItem1, Me.ChainScriptToolStripMenuItem1, Me.ChillToolStripMenuItem1, Me.CommentToolStripMenuItem1, Me.CountToolStripMenuItem1})
         Me.CToolStripMenuItem.Name = "CToolStripMenuItem"
-        Me.CToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.CToolStripMenuItem.Text = "c"
         '
         'CalibrateToolStripMenuItem1
@@ -887,7 +904,7 @@ Partial Class MainForm
         '
         Me.DToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DarkToolStripMenuItem1, Me.DawnFlatsToolStripMenuItem1, Me.DefocusToolStripMenuItem1, Me.DomeOpenToolStripMenuItem1, Me.DomeCloseToolStripMenuItem1, Me.DitherToolStripMenuItem1, Me.DirectoryToolStripMenuItem1, Me.DuskFlatsToolStripMenuItem1})
         Me.DToolStripMenuItem.Name = "DToolStripMenuItem"
-        Me.DToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.DToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.DToolStripMenuItem.Text = "d"
         '
         'DarkToolStripMenuItem1
@@ -942,20 +959,20 @@ Partial Class MainForm
         '
         Me.FToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FilterToolStripMenuItem1})
         Me.FToolStripMenuItem.Name = "FToolStripMenuItem"
-        Me.FToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.FToolStripMenuItem.Text = "f"
         '
         'FilterToolStripMenuItem1
         '
         Me.FilterToolStripMenuItem1.Name = "FilterToolStripMenuItem1"
-        Me.FilterToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.FilterToolStripMenuItem1.Size = New System.Drawing.Size(107, 22)
         Me.FilterToolStripMenuItem1.Text = "#Filter"
         '
         'IToolStripMenuItem
         '
         Me.IToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.IntervalToolStripMenuItem1})
         Me.IToolStripMenuItem.Name = "IToolStripMenuItem"
-        Me.IToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.IToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.IToolStripMenuItem.Text = "i"
         '
         'IntervalToolStripMenuItem1
@@ -968,7 +985,7 @@ Partial Class MainForm
         '
         Me.MToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ManualToolStripMenuItem1, Me.MinSetTimeToolStripMenuItem1})
         Me.MToolStripMenuItem.Name = "MToolStripMenuItem"
-        Me.MToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.MToolStripMenuItem.Text = "m"
         '
         'ManualToolStripMenuItem1
@@ -987,7 +1004,7 @@ Partial Class MainForm
         '
         Me.NToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NoPointingToolStripMenuItem1, Me.NoPreviewToolStripMenuItem1, Me.NoSolveToolStripMenuItem1, Me.NoWeatherToolStripMenuItem1})
         Me.NToolStripMenuItem.Name = "NToolStripMenuItem"
-        Me.NToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.NToolStripMenuItem.Text = "n"
         '
         'NoPointingToolStripMenuItem1
@@ -1018,7 +1035,7 @@ Partial Class MainForm
         '
         Me.PToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PointingToolStripMenuItem1, Me.PosAngToolStripMenuItem1})
         Me.PToolStripMenuItem.Name = "PToolStripMenuItem"
-        Me.PToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.PToolStripMenuItem.Text = "p"
         '
         'PointingToolStripMenuItem1
@@ -1037,7 +1054,7 @@ Partial Class MainForm
         '
         Me.QToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitAtToolStripMenuItem1})
         Me.QToolStripMenuItem.Name = "QToolStripMenuItem"
-        Me.QToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.QToolStripMenuItem.Text = "q"
         '
         'QuitAtToolStripMenuItem1
@@ -1050,7 +1067,7 @@ Partial Class MainForm
         '
         Me.RToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReadoutmodeToolStripMenuItem1, Me.RepeatToolStripMenuItem1})
         Me.RToolStripMenuItem.Name = "RToolStripMenuItem"
-        Me.RToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.RToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.RToolStripMenuItem.Text = "r"
         '
         'ReadoutmodeToolStripMenuItem1
@@ -1069,7 +1086,7 @@ Partial Class MainForm
         '
         Me.SToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SetsToolStripMenuItem1, Me.ScreenFlatsToolStripMenuItem1, Me.ShutdownToolStripMenuItem1, Me.ShutdownAtToolStripMenuItem1, Me.StackToolStripMenuItem1, Me.StackAlignToolStripMenuItem1, Me.SubframeToolStripMenuItem1})
         Me.SToolStripMenuItem.Name = "SToolStripMenuItem"
-        Me.SToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.SToolStripMenuItem.Text = "s"
         '
         'SetsToolStripMenuItem1
@@ -1118,7 +1135,7 @@ Partial Class MainForm
         '
         Me.TToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TagToolStripMenuItem1, Me.TargetToolStripMenuItem1, Me.TrackOnToolStripMenuItem1, Me.TrackOffToolStripMenuItem1})
         Me.TToolStripMenuItem.Name = "TToolStripMenuItem"
-        Me.TToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.TToolStripMenuItem.Text = "t"
         '
         'TagToolStripMenuItem1
@@ -1149,7 +1166,7 @@ Partial Class MainForm
         '
         Me.WToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.WaitForToolStripMenuItem1, Me.WaitUntilToolStripMenuItem1, Me.WaitZenDistToolStripMenuItem1, Me.WaitInLimitsToolStripMenuItem1, Me.WaitAirMassToolStripMenuItem1})
         Me.WToolStripMenuItem.Name = "WToolStripMenuItem"
-        Me.WToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WToolStripMenuItem.Size = New System.Drawing.Size(85, 22)
         Me.WToolStripMenuItem.Text = "w"
         '
         'WaitForToolStripMenuItem1
@@ -1363,7 +1380,7 @@ Partial Class MainForm
         Me.btnPopDocumentation.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnPopDocumentation.Location = New System.Drawing.Point(3, 3)
         Me.btnPopDocumentation.Name = "btnPopDocumentation"
-        Me.btnPopDocumentation.Size = New System.Drawing.Size(41, 40)
+        Me.btnPopDocumentation.Size = New System.Drawing.Size(36, 30)
         Me.btnPopDocumentation.TabIndex = 4
         Me.btnPopDocumentation.UseVisualStyleBackColor = True
         '
@@ -1520,7 +1537,7 @@ Partial Class MainForm
         Me.dtTimeCmd.Name = "dtTimeCmd"
         Me.dtTimeCmd.Size = New System.Drawing.Size(139, 20)
         Me.dtTimeCmd.TabIndex = 3
-        Me.ToolTip1.SetToolTip(Me.dtTimeCmd, "Specify the desired time." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Set the time using your LOCAL time. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This value will " & _
+        Me.ToolTip1.SetToolTip(Me.dtTimeCmd, "Specify the desired time." & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Set the time using your LOCAL time. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "This value will " &
         "be adjusted to UTC in the plan.")
         Me.dtTimeCmd.Value = New Date(2015, 12, 1, 21, 39, 0, 0)
         '
@@ -1963,7 +1980,7 @@ Partial Class MainForm
         'btnComboApply
         '
         Me.btnComboApply.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnComboApply.Location = New System.Drawing.Point(580, 2)
+        Me.btnComboApply.Location = New System.Drawing.Point(581, 2)
         Me.btnComboApply.Name = "btnComboApply"
         Me.btnComboApply.Size = New System.Drawing.Size(52, 29)
         Me.btnComboApply.TabIndex = 32
@@ -2265,7 +2282,7 @@ Partial Class MainForm
         Me.lblCommandName.AutoSize = True
         Me.lblCommandName.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblCommandName.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.lblCommandName.Location = New System.Drawing.Point(50, 0)
+        Me.lblCommandName.Location = New System.Drawing.Point(45, 0)
         Me.lblCommandName.Name = "lblCommandName"
         Me.lblCommandName.Size = New System.Drawing.Size(116, 25)
         Me.lblCommandName.TabIndex = 0
@@ -2291,24 +2308,6 @@ Partial Class MainForm
         '
         Me.OpenPathDialog.DefaultExt = "txt"
         '
-        'FilterToolStripMenuItem
-        '
-        Me.FilterToolStripMenuItem.Name = "FilterToolStripMenuItem"
-        Me.FilterToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.FilterToolStripMenuItem.Text = "#Filter"
-        '
-        'IntervalToolStripMenuItem
-        '
-        Me.IntervalToolStripMenuItem.Name = "IntervalToolStripMenuItem"
-        Me.IntervalToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.IntervalToolStripMenuItem.Text = "#Interval"
-        '
-        'BinningToolStripMenuItem
-        '
-        Me.BinningToolStripMenuItem.Name = "BinningToolStripMenuItem"
-        Me.BinningToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
-        Me.BinningToolStripMenuItem.Text = "#Binning"
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2316,6 +2315,7 @@ Partial Class MainForm
         Me.ClientSize = New System.Drawing.Size(682, 436)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "MainForm"
@@ -2620,5 +2620,4 @@ Partial Class MainForm
     Friend WithEvents FilterToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents IntervalToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BinningToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-
 End Class

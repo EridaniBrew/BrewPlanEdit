@@ -1,4 +1,16 @@
-﻿Public Class MainForm
+﻿'   BrewPlanEdit
+' Program to edit ACP plans.
+' 
+' Allows multiple tabs.
+' Provides preformatted ACP commands. 
+' Times are handled In local time, converts To UTC.
+' Help button provides help info copied from ACP User manual.
+' Groups Count/Interval/Bin/Filter commands together so they are in sync
+'
+' version 1.1.0.0 - Fixed a couple of bugs, I forget
+'         1.2.0.0 - Added ability to change font for old men. Also saves program size and position.
+
+Public Class MainForm
 
     Public panelList As Collection      ' all of the command panels
 
@@ -112,6 +124,8 @@
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ReadSettings()
+
         ' build the panel list
         panelList = New Collection
         panelList.Add(pnlFlatCommand, "pnlFlatCommand")
@@ -161,6 +175,20 @@
         txtNote.Text = ""
     End Sub
 
+    Private Function AreAnyPlansModified() As Boolean
+        ' step through the tabs, see if any have been modified
+        ' if so, return true
+        ' return false if none have been modified
+        Dim modified As Boolean = False
+        Dim theTabPage As TabPage
+        For Each theTabPage In TabControl1.TabPages
+            Dim plan As CPlan = theTabPage.Tag
+            If (plan.Modified) Then
+                modified = True
+            End If
+        Next
+        Return modified
+    End Function
 #Region "Main Menu Callbacks"
     Private Sub OpenToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OpenToolStripMenuItem.Click
         ' open the plan into the existing tab
@@ -241,7 +269,27 @@
     End Sub
 
     Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
-        End
+        If (AreAnyPlansModified()) Then
+            If MessageBox.Show("Some plans have been modified." & vbCrLf & "Are you sure you wish to close BrewPlanEdit?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                SaveSettings()
+                End
+            End If
+        Else
+            SaveSettings()
+            End
+        End If
+    End Sub
+
+    Private Sub Form_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        If (AreAnyPlansModified()) Then
+            If MessageBox.Show("Some plans have been modified." & vbCrLf & "Are you sure you wish to close BrewPlanEdit?", "Close", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = Windows.Forms.DialogResult.Yes Then
+                SaveSettings()
+            Else
+                e.Cancel = True
+            End If
+        Else
+            SaveSettings()
+        End If
     End Sub
 
     Private Sub AddTabToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddTabToolStripMenuItem.Click
@@ -373,94 +421,94 @@
 
 #Region "Context Menu Add command callbacks"
     ' routines to handle Add from context menu
-    Private Sub ChillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChillToolStripMenuItem.Click, _
-                                        NoWeatherToolStripMenuItem.Click, _
-                                        DomeOpenToolStripMenuItem.Click, _
-                                        DomeCloseToolStripMenuItem.Click, _
-                                        AutofocusToolStripMenuItem.Click, _
-                                        CountToolStripMenuItem.Click, _
-                                        DitherToolStripMenuItem.Click, _
-                                        SubFrameToolStripMenuItem.Click, _
-                                        DirectoryToolStripMenuItem.Click, _
-                                        TagToolStripMenuItem.Click, _
-                                        PosAngToolStripMenuItem.Click, _
-                                        ReadoutModeToolStripMenuItem.Click, _
-                                        ManualToolStripMenuItem.Click, _
-                                        AfIntervalToolStripMenuItem.Click, _
-                                        CalibrateToolStripMenuItem.Click, _
-                                        StackToolStripMenuItem.Click, _
-                                        StackAlignToolStripMenuItem.Click, _
-                                        AutoguideToolStripMenuItem.Click, _
-                                        PointingToolStripMenuItem.Click, _
-                                        NoPointingToolStripMenuItem.Click, _
-                                        NoPreviewToolStripMenuItem.Click, _
-                                        NoSolveToolStripMenuItem.Click, _
-                                        TrackOnToolStripMenuItem.Click, _
-                                        TrackOffToolStripMenuItem.Click, _
-                                        AlwaysSolveToolStripMenuItem.Click, _
-                                        WaitForToolStripMenuItem.Click, _
-                                        WaitUntilToolStripMenuItem.Click, _
-                                        WaitZenDistToolStripMenuItem.Click, _
-                                        WaitInLimitsToolStripMenuItem.Click, _
-                                        WaitAirMassToolStripMenuItem.Click, _
-                                        DuskFlatsToolStripMenuItem.Click, _
-                                        DawnFlatsToolStripMenuItem.Click, _
-                                        ScreenFlatsToolStripMenuItem.Click, _
-                                        DarkToolStripMenuItem.Click, _
-                                        BiasToolStripMenuItem.Click, _
-                                        SetsToolStripMenuItem.Click, _
-                                        RepeatToolStripMenuItem.Click, _
-                                        MinSetTimeToolStripMenuItem.Click, _
-                                        QuitAtToolStripMenuItem.Click, _
-                                        ShutdownToolStripMenuItem.Click, _
-                                        ShutdownAtToolStripMenuItem.Click, _
-                                        ChainToolStripMenuItem.Click, _
-                                        ChainScriptToolStripMenuItem.Click, _
+    Private Sub ChillToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ChillToolStripMenuItem.Click,
+                                        NoWeatherToolStripMenuItem.Click,
+                                        DomeOpenToolStripMenuItem.Click,
+                                        DomeCloseToolStripMenuItem.Click,
+                                        AutofocusToolStripMenuItem.Click,
+                                        CountToolStripMenuItem.Click,
+                                        DitherToolStripMenuItem.Click,
+                                        SubFrameToolStripMenuItem.Click,
+                                        DirectoryToolStripMenuItem.Click,
+                                        TagToolStripMenuItem.Click,
+                                        PosAngToolStripMenuItem.Click,
+                                        ReadoutModeToolStripMenuItem.Click,
+                                        ManualToolStripMenuItem.Click,
+                                        AfIntervalToolStripMenuItem.Click,
+                                        CalibrateToolStripMenuItem.Click,
+                                        StackToolStripMenuItem.Click,
+                                        StackAlignToolStripMenuItem.Click,
+                                        AutoguideToolStripMenuItem.Click,
+                                        PointingToolStripMenuItem.Click,
+                                        NoPointingToolStripMenuItem.Click,
+                                        NoPreviewToolStripMenuItem.Click,
+                                        NoSolveToolStripMenuItem.Click,
+                                        TrackOnToolStripMenuItem.Click,
+                                        TrackOffToolStripMenuItem.Click,
+                                        AlwaysSolveToolStripMenuItem.Click,
+                                        WaitForToolStripMenuItem.Click,
+                                        WaitUntilToolStripMenuItem.Click,
+                                        WaitZenDistToolStripMenuItem.Click,
+                                        WaitInLimitsToolStripMenuItem.Click,
+                                        WaitAirMassToolStripMenuItem.Click,
+                                        DuskFlatsToolStripMenuItem.Click,
+                                        DawnFlatsToolStripMenuItem.Click,
+                                        ScreenFlatsToolStripMenuItem.Click,
+                                        DarkToolStripMenuItem.Click,
+                                        BiasToolStripMenuItem.Click,
+                                        SetsToolStripMenuItem.Click,
+                                        RepeatToolStripMenuItem.Click,
+                                        MinSetTimeToolStripMenuItem.Click,
+                                        QuitAtToolStripMenuItem.Click,
+                                        ShutdownToolStripMenuItem.Click,
+                                        ShutdownAtToolStripMenuItem.Click,
+                                        ChainToolStripMenuItem.Click,
+                                        ChainScriptToolStripMenuItem.Click,
                                         DefocusToolStripMenuItem.Click, _
  _
-                                        ChillToolStripMenuItem1.Click, _
-                                        NoWeatherToolStripMenuItem1.Click, _
-                                        DomeOpenToolStripMenuItem1.Click, _
-                                        DomeCloseToolStripMenuItem1.Click, _
-                                        AutofocusToolStripMenuItem1.Click, _
-                                        CountToolStripMenuItem1.Click, _
-                                        DitherToolStripMenuItem1.Click, _
-                                        SubframeToolStripMenuItem1.Click, _
-                                        DirectoryToolStripMenuItem1.Click, _
-                                        TagToolStripMenuItem1.Click, _
-                                        PosAngToolStripMenuItem1.Click, _
-                                        ReadoutmodeToolStripMenuItem1.Click, _
-                                        ManualToolStripMenuItem1.Click, _
-                                        AfIntervalToolStripMenuItem1.Click, _
-                                        CalibrateToolStripMenuItem1.Click, _
-                                        StackToolStripMenuItem1.Click, _
-                                        StackAlignToolStripMenuItem1.Click, _
-                                        AutoGuideToolStripMenuItem1.Click, _
-                                        PointingToolStripMenuItem1.Click, _
-                                        NoPointingToolStripMenuItem1.Click, _
-                                        NoPreviewToolStripMenuItem1.Click, _
-                                        NoSolveToolStripMenuItem1.Click, _
-                                        TrackOnToolStripMenuItem1.Click, _
-                                        TrackOffToolStripMenuItem1.Click, _
-                                        AlwaysSolveToolStripMenuItem1.Click, _
-                                        WaitForToolStripMenuItem1.Click, _
-                                        WaitForToolStripMenuItem1.Click, _
-                                        WaitZenDistToolStripMenuItem1.Click, _
-                                        WaitInLimitsToolStripMenuItem1.Click, _
-                                        WaitAirMassToolStripMenuItem1.Click, _
-                                        DuskFlatsToolStripMenuItem1.Click, _
-                                        DawnFlatsToolStripMenuItem1.Click, _
-                                        ScreenFlatsToolStripMenuItem1.Click, _
-                                        DarkToolStripMenuItem1.Click, _
-                                        BiasToolStripMenuItem1.Click, _
-                                        SetsToolStripMenuItem1.Click, _
-                                        RepeatToolStripMenuItem1.Click, _
-                                        MinSetTimeToolStripMenuItem1.Click, _
-                                        QuitAtToolStripMenuItem1.Click, _
-                                        ShutdownToolStripMenuItem1.Click, _
-                                        ShutdownAtToolStripMenuItem1.Click, _
-                                        ChainToolStripMenuItem1.Click, _
-                                        ChainScriptToolStripMenuItem1.Click, _
+                                        ChillToolStripMenuItem1.Click,
+                                        NoWeatherToolStripMenuItem1.Click,
+                                        DomeOpenToolStripMenuItem1.Click,
+                                        DomeCloseToolStripMenuItem1.Click,
+                                        AutofocusToolStripMenuItem1.Click,
+                                        CountToolStripMenuItem1.Click,
+                                        DitherToolStripMenuItem1.Click,
+                                        SubframeToolStripMenuItem1.Click,
+                                        DirectoryToolStripMenuItem1.Click,
+                                        TagToolStripMenuItem1.Click,
+                                        PosAngToolStripMenuItem1.Click,
+                                        ReadoutmodeToolStripMenuItem1.Click,
+                                        ManualToolStripMenuItem1.Click,
+                                        AfIntervalToolStripMenuItem1.Click,
+                                        CalibrateToolStripMenuItem1.Click,
+                                        StackToolStripMenuItem1.Click,
+                                        StackAlignToolStripMenuItem1.Click,
+                                        AutoGuideToolStripMenuItem1.Click,
+                                        PointingToolStripMenuItem1.Click,
+                                        NoPointingToolStripMenuItem1.Click,
+                                        NoPreviewToolStripMenuItem1.Click,
+                                        NoSolveToolStripMenuItem1.Click,
+                                        TrackOnToolStripMenuItem1.Click,
+                                        TrackOffToolStripMenuItem1.Click,
+                                        AlwaysSolveToolStripMenuItem1.Click,
+                                        WaitForToolStripMenuItem1.Click,
+                                        WaitForToolStripMenuItem1.Click,
+                                        WaitZenDistToolStripMenuItem1.Click,
+                                        WaitInLimitsToolStripMenuItem1.Click,
+                                        WaitAirMassToolStripMenuItem1.Click,
+                                        DuskFlatsToolStripMenuItem1.Click,
+                                        DawnFlatsToolStripMenuItem1.Click,
+                                        ScreenFlatsToolStripMenuItem1.Click,
+                                        DarkToolStripMenuItem1.Click,
+                                        BiasToolStripMenuItem1.Click,
+                                        SetsToolStripMenuItem1.Click,
+                                        RepeatToolStripMenuItem1.Click,
+                                        MinSetTimeToolStripMenuItem1.Click,
+                                        QuitAtToolStripMenuItem1.Click,
+                                        ShutdownToolStripMenuItem1.Click,
+                                        ShutdownAtToolStripMenuItem1.Click,
+                                        ChainToolStripMenuItem1.Click,
+                                        ChainScriptToolStripMenuItem1.Click,
                                         DefocusToolStripMenuItem1.Click
 
         Dim it As ToolStripMenuItem = sender
@@ -475,8 +523,8 @@
     Private Sub TargetToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TargetToolStripMenuItem.Click, TargetToolStripMenuItem1.Click
         GetPlan().AddDefault("MyTarget")
     End Sub
-    Private Sub FilterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterToolStripMenuItem.Click, FilterToolStripMenuItem1.Click, _
-        IntervalToolStripMenuItem.Click, IntervalToolStripMenuItem1.Click, _
+    Private Sub FilterToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FilterToolStripMenuItem.Click, FilterToolStripMenuItem1.Click,
+        IntervalToolStripMenuItem.Click, IntervalToolStripMenuItem1.Click,
         BinningToolStripMenuItem.Click, BinningToolStripMenuItem1.Click
         GetPlan().AddDefault("#Count")
     End Sub
@@ -532,4 +580,28 @@
         Help.ShowHelp(Me, HelpProvider1.HelpNamespace, HelpNavigator.TableOfContents)
     End Sub
 
+    Public Sub ReadSettings()
+        ' Font.tostring gives [Font: Name=Microsoft Sans Serif, Size=8.25, Units=3, GdiCharSet=0, GdiVerticalFont=False]
+        Dim font As Font
+        Dim myFontStyle As FontStyle = My.Settings.FontStyle
+        font = New Font(My.Settings.FontFamily, My.Settings.FontSize, myFontStyle)
+        Me.Font = font
+        PrefDialog.ActiveForm.Font = font
+
+        Me.Width = My.Settings.MainWidth
+        Me.Height = My.Settings.MainHeight
+        Me.Top = My.Settings.MainTop
+        Me.Left = My.Settings.MainLeft
+    End Sub
+
+    Public Sub SaveSettings()
+        My.Settings.FontFamily = Me.Font.FontFamily.ToString()
+        My.Settings.FontSize = Me.Font.Size
+        My.Settings.FontStyle = Me.Font.Style
+        My.Settings.MainWidth = Me.Width
+        My.Settings.MainHeight = Me.Height
+        My.Settings.MainTop = Me.Top
+        My.Settings.MainLeft = Me.Left
+        My.Settings.Save()
+    End Sub
 End Class

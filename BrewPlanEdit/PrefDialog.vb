@@ -76,4 +76,14 @@ Public Class PrefDialog
 
     End Sub
 
+    Private Sub btnFont_Click(sender As Object, e As EventArgs) Handles btnFont.Click
+        ' Pop up the Font Dialog, handle the return
+        If (FontDialog1.ShowDialog() = DialogResult.OK) Then
+            Dim f As Font = FontDialog1.Font
+            ' apply the new font
+            Me.Font = f
+            MainForm.Font = f
+        End If
+
+    End Sub
 End Class

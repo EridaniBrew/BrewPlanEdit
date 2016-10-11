@@ -156,6 +156,7 @@
     <None Include="Resources\targetquestionSmall.jpg" />
     <None Include="Resources\thorhaoSmall.jpg" />
     <Content Include="ACPHelp.htm" />
+    <Content Include="BugList.txt" />
     <Content Include="ComboCmd.htm" />
     <Content Include="ContextMenu.htm" />
     <Content Include="Features.htm" />
